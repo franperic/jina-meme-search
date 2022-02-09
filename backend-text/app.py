@@ -8,8 +8,8 @@ flow = (
     .add(uses="jinahub://DocCache")
     .add(
         name="meme_text_encoder",
-        uses="jinahub://SpacyTextEncoder/v0.3",
-        uses_with={"model_name": MODEL},
+        uses="jinahub://CLIPTextEncoder",
+        #uses_with={"model_name": MODEL},
         volumes=f"{CACHE_DIR}:/root/.cache",
         install_requirements=True,
     )
