@@ -10,7 +10,7 @@ IMAGE_SERVER = os.getenv("BACKEND_IMAGE", "0.0.0.0")
 IMAGE_PORT = 65432
 
 # General
-TOP_K = 10
+TOP_K = 20
 DEBUG = os.getenv("DEBUG", False)
 DATA_DIR = "../data/images/"
 
