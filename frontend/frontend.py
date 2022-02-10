@@ -39,7 +39,7 @@ st.subheader("...or search from a sample")
 
 for text in TEXT_SAMPLES:
     if st.button(text):
-        matches = search_by_text(input=text, server=TEXT_SERVER, port=TEXT_PORT)
+        matches = search_by_text(input=text, server=TEXT_SERVER, port=TEXT_PORT)[::2]
 
 
 # Results area
