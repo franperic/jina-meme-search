@@ -34,7 +34,7 @@ with st.form("text_search"):
     search_fn = search_by_text
     submitted = st.form_submit_button("Search")
 if submitted:
-    matches = search_by_text(input=query, server=TEXT_SERVER, port=TEXT_PORT)
+    matches = search_by_text(input=query, server=TEXT_SERVER, port=TEXT_PORT)[::2]
 st.subheader("...or search from a sample")
 
 for text in TEXT_SAMPLES:
