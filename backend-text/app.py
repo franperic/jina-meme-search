@@ -8,8 +8,8 @@ flow = (
     .add(uses="jinahub://DocCache")
     .add(
         name="meme_text_encoder",
-        uses="jinahub://CLIPTextEncoder",
-        #uses_with={"model_name": MODEL},
+        uses="jinahub://SpacyTextEncoder/v0.3",
+        uses_with={"model_name": MODEL},
         volumes=f"{CACHE_DIR}:/root/.cache",
         install_requirements=True,
     )
@@ -18,7 +18,7 @@ flow = (
         uses="jinahub://PQLiteIndexer/v0.1.3",
         uses_with={
             "limit": 12,
-            "dim": 512, # SpaCy en_core_md uses 300 dims
+            "dim": 300, # SpaCy en_core_md uses 300 dims
             "include_metadata": True
         },
         volumes=f"./{WORKSPACE_DIR}:/workspace/workspace",
