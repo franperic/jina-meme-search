@@ -8,7 +8,7 @@ flow = (
     .add(uses="jinahub://DocCache")
     .add(
         name="meme_text_encoder",
-        uses="jinahub://CLIPTextEncoder/v0.3",
+        uses="jinahub://CLIPTextEncoder",
         #uses_with={"model_name": MODEL},
         volumes=f"{CACHE_DIR}:/root/.cache",
         install_requirements=True,
